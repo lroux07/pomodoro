@@ -3,20 +3,21 @@ let infos = document.querySelector('#infos');
 let steps = document.querySelector('#steps');
 const send = document.querySelector('#send');
 const section = document.querySelector('#section');
-let numberArticles = 0;
 let err = document.querySelector('#err');
+let articleIds = [];
 
 send.addEventListener('click', () => {
-    if(taskName.value === "" || infos.value === "" || steps.value === "") {
-        alert('Err! Tout les champs ne sont pas valident...');
+    if(taskName.value === "" || infos.value === "") {
+        alert('Err! Tout les champs ne sont pas valides...');
     } else {
         const article = document.createElement('article');
+        let articleId = 'article' + (articleIds.length + 1);
+        article.id = articleId;
         section.appendChild(article);
         const header = document.createElement('header');
         article.appendChild(header);
         const footer = document.createElement('footer');
         article.appendChild(footer);
-        console.log(article);
 
         let h3 = document.createElement('h3');
         h3.textContent = taskName.value;
@@ -25,15 +26,15 @@ send.addEventListener('click', () => {
         p.textContent = infos.value;
         header.appendChild(p);
 
-        numberArticles++;
-    }
+        let edit = document.createElement('button');
+        edit.textContent = 'Modifier';
+        edit.classList.add('edit');
+        footer.appendChild(edit);
+        let drop = document.createElement('button');
+        drop.textContent = 'Supprimer';
+        drop.classList.add('drop');
+        footer.appendChild(drop);
 
-    if(numberArticles < 33) {
-        send.disabled = false;
-        err.classList.remove('err');
-    } else {
-        send.disabled = true;
-        err.textContent = "Err! Vous avez atteint le nombre de tâches qui vous est attibué.";
-        err.classList.add('err');
+        articleIds.push(articleId);
     }
-})
+});

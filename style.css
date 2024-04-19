@@ -63,9 +63,39 @@ article {
   border-radius: 15px;
   border: none;
   width: 200px;
-  min-height: 70px;
-  max-height: 80px;
+  min-height: 130px;
+  max-height: 130px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: cornflowerblue;
+}
+
+.drop {
+  background-color: rgb(237, 100, 100);
+}
+
+.filter {
+  background-color: black;
+  opacity: 50%;
+  height: 100dvh;
+  width: 100dvw;
+  position: absolute;
+  z-index: 1;
 }
