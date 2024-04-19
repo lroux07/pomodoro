@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="description">
     <link rel="stylesheet" href="style.css">
-    <title>Vite App</title>
+    <title>Pomodoro</title>
   </head>
   <body>
-    <h1>Hello world!</h1>
     <main>
-      <form action="" method="post">
-        <h2>Créer une tâche</h2>
+      <div class="form">
+        <h1>Créer une tâche</h1>
   
-        <label for="name">Nom de la tâche</label>
+        <label for="taskName">Nom de la tâche</label>
         <input type="text" name="name" id="taskName" placeholder="Ecrire ici" required>
         
         <label for="infos">Informations suplémentaires</label>
@@ -24,9 +23,9 @@
         <input type="text" name="steps" id="steps" placeholder="Ecrire ici">
         
         <button id="send">Valider</button>
-      </form>
+      </div>
 
-      <section id="section"></section>
+      <section id="section" class="section"></section>
     </main>
 
     <script type="module" src="/main.js"></script>
