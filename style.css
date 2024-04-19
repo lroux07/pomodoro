@@ -11,3 +11,26 @@ body {
   /* width: 100dvw; */
   font-family: 'Poppins';
 }
+
+main {
+  border: 1px solid #ababab;
+  height: 100%;
+  display: flex;
+}
+
+form {
+  border-right: 1px solid #ababab;
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: 15%; */
+  padding: 1rem;
+}
+
+form button {
+  margin: 1rem 0;
+}
+
+section {
+  background-color: aqua;
+}

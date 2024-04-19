@@ -9,7 +9,26 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Hello world!</h1>
+    <main>
+      <form action="" method="post">
+        <h2>Créer une tâche</h2>
+  
+        <label for="name">Nom de la tâche</label>
+        <input type="text" name="name" id="taskName" placeholder="Ecrire ici" required>
+        
+        <label for="infos">Informations suplémentaires</label>
+        <input type="text" name="infos" id="infos" placeholder="Ecrire ici">
+  
+        <label for="steps">Étapes</label>
+        <input type="text" name="steps" id="steps" placeholder="Ecrire ici">
+        
+        <button id="send">Valider</button>
+      </form>
+
+      <section id="section"></section>
+    </main>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
